@@ -13,7 +13,9 @@
       "coverage"
     ],
     "include": [
-      "."
+      "**",
+      "!/dist",
+      "!*.generated.js"
     ]
   },
   "formatter": {
