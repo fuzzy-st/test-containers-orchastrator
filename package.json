@@ -2,12 +2,17 @@
   "name": "test-containers-orchastrator",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/main.js",
-  "module": "dist/main.mjs",
-  "types": "dist/main.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
   "scripts": {
-    "dev": "tsx --watch --no-cache src/main.ts",
+    "dev": "tsx --watch --no-cache src/index.ts",
     "build": "tsup",
     "examples": "tsx --no-cache src/examples.ts",
     "test": "node --import tsx --experimental-test-coverage --test-reporter=spec --test \"**/*.test.{ts,js}\"",
@@ -26,17 +31,19 @@
   "author": "aFuzzyBear",
   "license": "MIT",
   "devDependencies": {
+    "@azure/storage-blob": "^12.28.0",
     "@biomejs/biome": "^1.9.4",
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
-    "@types/node": "^22.14.0",
-    "lint-staged": "^15.5.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@types/node": "^22.18.8",
+    "lint-staged": "^15.5.2",
     "standard-version": "^9.5.0",
-    "tsup": "^8.4.0",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.2"
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "testcontainers": "^11.0.0"
+    "@fuzzy-street/errors": "^1.1.0",
+    "testcontainers": "^11.7.1"
   }
 }
